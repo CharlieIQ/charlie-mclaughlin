@@ -1,0 +1,200 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Charlie McLaughlin} \\ \vspace{1pt}
+    \small 902-740-0842 $|$ 
+    \href{mailto:charliermclaughlin@gmail.com}{\underline{charliermclaughlin@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/charlie-mclaughlin-s13/}{\underline{linkedin.com/in/charlie-mclaughlin-s13}} $|$
+    \href{https://github.com/CharlieIQ}{\underline{github.com/CharlieIQ}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Dalhousie University}{Halifax, NS}
+      {Bachelor's of Computer Science (GPA 4.01)}{September 2023 -- Present}
+    \resumeSubheading
+      {Yarmouth Consolidated Memorial High School}{Yarmouth, NS}
+      {High School Diploma (98.0\% Average)}{September 2019 -- June 2023}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineering Intern}{May 2025 -- July 2025}
+      {Cognizant}{Halifax, NS}
+      \resumeItemListStart
+        \resumeItem{Developed a full-stack chat bot application to assist technical support teams using the Google Cloud Platform}
+        \resumeItem{Led the front end development in ReactJS, and assisted the backend development using the Python Flask framework}
+        \resumeItem{Set up CI/CD pipelines to automate testing using Vitest and deployment through Google Cloud Build}
+        \resumeItem{Participated in Scrum ceremonies to support Agile delivery and team alignment.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {GIS Technician}{February 2023 -- August 2024}
+      {Town of Yarmouth}{Yarmouth, NS}
+      \resumeItemListStart
+        \resumeItem{Co-developed a GIS-based web map featuring 400+ accessible locations across Yarmouth County using QGIS/ArcGIS.}
+        \resumeItem{Managed version control and collaboration using Git.}
+        \resumeItem{The project was deployed using HTML \& JavaScript and is being widely used by residents of the county.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Software \& Security Intern}{July 2022 -- August 2023}
+      {IBM}{Halifax, NS}
+      \resumeItemListStart
+        \resumeItem{Developed and deployed a company wide acronym bot using JavaScript, PHP, and SQL in collaboration with frontend and project management teams.}
+        \resumeItem{Enhanced security event documentation and classified incidents for a large scale SIEM product.}
+        \resumeItem{Automated SIEM product updates using Python, improving response efficiency.}
+        \resumeItem{Utilized GitHub for team collaboration, with the bot project now in active company use.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/CharlieIQ/agentic-devteam-ai} {Agentic AI Devteam}} $|$ \emph{ReactJS, CrewAI, Python}}{July 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed an agentic AI-powered software team using CrewAI to automate full-stack app prototyping.}
+            \resumeItem{Created a Python Flask server to manage frontend API calls to the AI development team.}
+            \resumeItem{Designed a React-based UI for users to submit project requirements and receive auto generated code.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+        {\textbf{\href{https://github.com/CharlieIQ/piggle} {Piggle}} $|$ \emph{React, CSS, Firebase, Cloud Firestore}}{February 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Designed and developed an interactive browser based puzzle game using React.}
+        \resumeItem{Implemented Firestore to manage player accounts, levels, and leaderboard data in real time.}
+        \resumeItem{Developed a functional level editor, and a level browser dashboard for user created content.}
+      \resumeItemListEnd
+      \resumeProjectHeading        {\textbf{\href{https://charlieiq.github.io/accessibility_mapping_project/} {Yarmouth County Accessibility Map}} $|$ \emph{JavaScript, HTML, CSS, QGIS}}{February 2023 -- August 2024}
+          \resumeItemListStart
+            \resumeItem{Created a map of all accessible points in Yarmouth County Nova Scotia.}
+            \resumeItem{Used QGIS and ArcGIS for plotting the points and Git for project management.}
+            \resumeItem{Created an interactive front end website to display the map using HTML and JavaScript.}
+            \resumeItem{Map is used by residents with accessibility needs in Yarmouth County, and tourists coming to the area.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Python, JavaScript, C, SQL, HTML/CSS} \\
+     \textbf{Frameworks \& Libraries}{: React, Node.js, Flask, Tailwind, JUnit, Jest, Vitest, pandas, NumPy } \\
+     \textbf{Developer Tools}{: Git, GCP, Firebase, VS Code, PyCharm, IntelliJ, MySQL} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Mail, Phone, Github, Linkedin, Send, CheckCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 /**
  * This is the Contact component
@@ -17,6 +18,11 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
 
+  useEffect(() => {
+    const userId = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    emailjs.init(userId);
+  }, []);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -30,10 +36,19 @@ const Contact = () => {
     setError('');
 
     try {
-      // Note: You'll need to set up EmailJS with your own service ID, template ID, and public key
-      // For now, this will just simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        }
+      );
+
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
     } catch {

@@ -50,7 +50,7 @@ const Projects = () => {
         'Designed modern syntax with focus on developer experience'
       ],
       technologies: ['Rust', 'Compiler Design', 'Language Implementation'],
-      github: null,
+      github: 'https://github.com/CharlieIQ/finnlang',
       live: null,
       date: 'Ongoing',
       icon: Code2,

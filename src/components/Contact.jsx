@@ -36,6 +36,7 @@ const Contact = () => {
     setError('');
 
     try {
+      // Get service and template IDs from environment variables
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
@@ -43,8 +44,8 @@ const Contact = () => {
         serviceId,
         templateId,
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
         }
       );

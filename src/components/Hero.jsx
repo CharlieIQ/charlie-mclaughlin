@@ -68,7 +68,7 @@ const Hero = () => {
               3rd Year Computer Science Student at Dalhousie University
             </p>
             <p className="text-lg md:text-xl text-gray-400 mb-12">
-              Currently SWE Intern @ Cognizant • Previously 2x Intern @ IBM
+              Previously SWE Intern at Cognizant & 2x Intern @ IBM
             </p>
 
           </motion.div>

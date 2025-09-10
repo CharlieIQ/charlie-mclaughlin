@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Calendar, Bot, Gamepad2, Code2, Map, Grid3X3, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Github, ExternalLink, Calendar, Bot, Gamepad2, Code2, Map, ChartNoAxesCombined, ChevronLeft, ChevronRight } from 'lucide-react';
 
 /**
  * This is the Projects component
@@ -13,7 +13,7 @@ const Projects = () => {
   const projects = [
     {
       title: 'Agentic AI Devteam',
-      description: 'An AI-powered software development team using CrewAI to automate full-stack app prototyping. Features a Python Flask server managing frontend API calls and a React-based UI for project requirements.',
+      description: 'An AI-powered software development team using CrewAI to automate full-stack app prototyping. Features a Python Flask server managing frontend API calls and a React UI for project requirements.',
       longDescription: [
         'Developed an agentic AI-powered software team using CrewAI to automate full-stack app prototyping',
         'Created a Python Flask server to manage frontend API calls to the AI development team',
@@ -28,14 +28,14 @@ const Projects = () => {
     },
     {
       title: 'Piggle',
-      description: 'An interactive browser-based puzzle game built with React. Features real-time player accounts, leaderboards, a functional level editor, and user-generated content browser.',
+      description: 'An interactive browser puzzle game built with React. Features real time player accounts, leaderboards, a functional level editor, and user generated content browser.',
       longDescription: [
         'Designed and developed an interactive browser based puzzle game using React',
         'Implemented Firestore to manage player accounts, levels, and leaderboard data in real time',
         'Developed a functional level editor, and a level browser dashboard for user created content'
       ],
       technologies: ['React', 'CSS', 'Firebase', 'Cloud Firestore'],
-      github: null,
+      github: 'https://github.com/CharlieIQ/piggle',
       live: 'https://charlieiq.github.io/piggle/',
       date: 'February 2025 - Present',
       icon: Gamepad2,
@@ -43,16 +43,16 @@ const Projects = () => {
     },
     {
       title: 'Finnlang',
-      description: 'A custom programming language built in Rust, named after my dog Finn. Features modern syntax design and efficient compilation.',
+      description: 'A custom programming language built in Rust, named after my dog Finn. Features custom syntax design and efficient compilation.',
       longDescription: [
         'Built a complete programming language from scratch using Rust',
         'Implemented lexical analysis, parsing, and code generation',
-        'Designed modern syntax with focus on developer experience'
+        'Designed my own syntax, and some pet inspired syntax'
       ],
       technologies: ['Rust', 'Compiler Design', 'Language Implementation'],
       github: 'https://github.com/CharlieIQ/finnlang',
       live: null,
-      date: 'Ongoing',
+      date: 'July 2025',
       icon: Code2,
       screenshots: ["/images/finnlang.png"]
     },
@@ -66,25 +66,25 @@ const Projects = () => {
         'Map is used by residents with accessibility needs in Yarmouth County, and tourists coming to the area'
       ],
       technologies: ['JavaScript', 'HTML', 'CSS', 'QGIS', 'ArcGIS'],
-      github: null,
+      github: 'null',
       live: 'https://charlieiq.github.io/accessibility_mapping_project/',
       date: 'February 2023 - August 2024',
       icon: Map,
       screenshots: ["/images/accessibility_map.png"]
     },
     {
-      title: 'Bingo Card Maker',
-      description: 'A customizable bingo card generator built with React. Allows users to create personalized bingo cards for events and games.',
+      title: 'Algorithm Visualizer',
+      description: 'A React + Typescript app for visualizing sorting algorithms. Also features a simple code editor so you can write your own algorithms!',
       longDescription: [
-        'Built a React application for generating custom bingo cards that can be downloaded as images',
-        'Implemented dynamic card generation with user-defined content',
-        'Created for the purpose of movie watching parties, but can be used for any bingo game'
+        'Developed a React and Typescript application to visualize various sorting algorithms',
+        'Mostly meant to help me with my Algorithms I class',
+        'Also made a code editor where you can visualize your own algorithms'
       ],
-      technologies: ['React', 'JavaScript', 'CSS'],
-      github: null,
-      live: null,
-      date: '2024',
-      icon: Grid3X3,
+      technologies: ['React', 'TypeScript', 'TailWind CSS'],
+      github: 'https://github.com/CharlieIQ/algorithm-visualizer',
+      live: 'https://charlieiq.github.io/algorithm-visualizer/',
+      date: 'September 2025',
+      icon: ChartNoAxesCombined,
       screenshots: ["/images/bingo.png"]
     }
   ];
@@ -293,7 +293,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-gray-400 mb-6">Want to see more of my work?</p>
+          <p className="text-gray-400 mb-6">Want to see more of my stuff?</p>
           <a
             href="https://github.com/CharlieIQ"
             target="_blank"

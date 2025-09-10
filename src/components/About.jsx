@@ -27,6 +27,7 @@ const About = () => {
     'On my first week of my Cognizant internship, I accidentally committed a node_modules folder to main',
     'Even though I know C, it remains the bane of my existence',
     'I cannot write Java without being under the influence of caffeine',
+    'I have visited 14 countries outside of Canada',
   ];
 
   return (
@@ -68,8 +69,8 @@ const About = () => {
                 generative AI, and I'm working it into more of my projects.
               </p>
               <p>
-                In my free time, I'm working on Finnlang, a custom programming language built 
-                in Rust, and various web applications that solve real-world problems.
+                In my free time, I'm working on various personal projects, drinking coffee,
+                and travelling. Most recently I spent 3 weeks backpacking through Eastern Europe!
               </p>
             </div>
           </motion.div>

@@ -59,6 +59,7 @@ const Contact = () => {
     }
   };
 
+  // For some reason VSCode is complaining about the icons (IDK)
   const contactInfo = [
     {
       icon: <Github size={24} />,
@@ -90,8 +91,7 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-300 text-center leading-relaxed">
-            I'm always interested in new opportunities and collaborations. 
-            Whether you have a project in mind or just want to connect, feel free to reach out!
+            Always interested to meet new people and chat, feel free to reach out!
           </p>
         </motion.div>
 

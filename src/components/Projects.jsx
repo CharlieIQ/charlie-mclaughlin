@@ -43,7 +43,7 @@ const Projects = () => {
     },
     {
       title: 'Finnlang',
-      description: 'A custom programming language built in Rust, named after my dog Finn. Features custom syntax design and efficient compilation.',
+      description: 'A custom programming language built in Rust, named after my dog Finn. Has pretty much everything you want in a language: variables, functions, control flow, classes, and more!',
       longDescription: [
         'Built a complete programming language from scratch using Rust',
         'Implemented lexical analysis, parsing, and code generation',

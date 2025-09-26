@@ -9,20 +9,24 @@ import emailjs from '@emailjs/browser';
  * @returns {JSX.Element} Contact component
  */
 const Contact = () => {
+  // Form data state
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+  // Submission state
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
 
+  // This initializes EmailJS with the user ID from environment variables
   useEffect(() => {
     const userId = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
     emailjs.init(userId);
   }, []);
 
+  // Handle form input changes
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -30,6 +34,8 @@ const Contact = () => {
     });
   };
 
+  // Handle form submission asynchronously
+  // (Learned async again in class today :))
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -39,7 +45,7 @@ const Contact = () => {
       // Get service and template IDs from environment variables
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-
+      // Send the email using EmailJS service
       await emailjs.send(
         serviceId,
         templateId,
@@ -105,7 +111,7 @@ const Contact = () => {
             className="contact-card"
           >
             <h3 className="text-2xl font-bold mb-8 text-center lg:text-left">Send me a message</h3>
-            
+
             {isSubmitted ? (
               <div className="text-center py-12">
                 <div className="mb-6">
@@ -137,7 +143,7 @@ const Contact = () => {
                     placeholder="Enter your name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="form-label">
                     Email Address
@@ -153,7 +159,7 @@ const Contact = () => {
                     placeholder="your.email@example.com"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="form-label">
                     Message
@@ -169,13 +175,13 @@ const Contact = () => {
                     placeholder="Give me a shout! I'd love to hear from you."
                   />
                 </div>
-                
+
                 {error && (
                   <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
                     <p className="text-red-400 text-sm font-medium">{error}</p>
                   </div>
                 )}
-                
+
                 <button
                   type="submit"
                   disabled={isSubmitting}

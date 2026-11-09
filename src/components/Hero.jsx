@@ -65,10 +65,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-xl md:text-2xl text-gray-300 mb-6">
-              3rd Year Computer Science Student at Dalhousie University
+              4th Year Computer Science Student at Dalhousie University
             </p>
             <p className="text-lg md:text-xl text-gray-400 mb-12">
-              Incoming Intern at Lockheed Martin, Previously SWE Intern at Cognizant & 2x Intern @ IBM
+              Previously SWE Intern at Cognizant, LM Canada, & 2x Intern @ IBM
             </p>
 
           </motion.div>

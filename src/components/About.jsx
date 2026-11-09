@@ -23,11 +23,12 @@ const About = () => {
 
   const facts = [
     'My programming language project is named after my dog Finn',
+    'I am a part time comedy writer for my university newspaper',
     'My favourite sorting algorithm is BogoSort',
     'On my first week of my Cognizant internship, I accidentally committed a node_modules folder to main',
     'Even though I know C, it remains the bane of my existence',
     'I cannot write Java without being under the influence of caffeine',
-    'I have visited 14 countries outside of Canada',
+    'I have visited 15 countries outside of Canada'
   ];
 
   return (
